@@ -1,0 +1,639 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Privacy Policy — DocFlow PDF Tools</title>
+<meta name="description" content="Privacy Policy for DocFlow PDF Tools. Learn how we handle your data, use cookies, and display advertisements.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@700;900&family=Plus+Jakarta+Sans:wght@300;400;500;600&family=Instrument+Serif:ital@1&display=swap" rel="stylesheet">
+<style>
+*{margin:0;padding:0;box-sizing:border-box}
+
+:root{
+  --cream:#FAF8F4;
+  --white:#FFFFFF;
+  --ink:#1C1917;
+  --ink2:#44403C;
+  --ink3:#78716C;
+  --ink4:#A8A29E;
+  --rule:#E7E5E4;
+  --rule2:#D6D3D1;
+  --amber:#D97706;
+  --amber-light:#FEF3C7;
+  --blue:#2563EB;
+  --blue-light:#EFF6FF;
+  --green:#059669;
+  --green-light:#ECFDF5;
+  --red:#DC2626;
+  --red-light:#FEF2F2;
+  --r:12px;
+}
+
+body{
+  background:var(--cream);
+  color:var(--ink);
+  font-family:'Plus Jakarta Sans',sans-serif;
+  font-size:15px;
+  line-height:1.7;
+}
+
+/* ── DARK ── */
+body.dark{
+  --cream:#0F0F13;--white:#1A1A22;--ink:#EDECEA;--ink2:#C9C5C0;
+  --ink3:#8C8680;--ink4:#5C5752;--rule:#2A2826;--rule2:#36332F;
+  --amber:#F59E0B;--amber-light:#2A2008;--blue:#60A5FA;--blue-light:#0F1A2E;
+  --green:#34D399;--green-light:#052016;--red:#F87171;--red-light:#200808;
+}
+body.dark header{background:rgba(15,15,19,.96)}
+body.dark .toc-card{background:var(--white)}
+body.dark .policy-section{background:var(--white)}
+body.dark .highlight-box{background:var(--amber-light)}
+body.dark .info-card{background:var(--white)}
+
+::-webkit-scrollbar{width:5px}
+::-webkit-scrollbar-track{background:var(--cream)}
+::-webkit-scrollbar-thumb{background:var(--rule2);border-radius:3px}
+
+/* ── HEADER ── */
+header{
+  position:sticky;top:0;z-index:90;
+  background:rgba(250,248,244,.96);
+  backdrop-filter:blur(16px);
+  border-bottom:1px solid var(--rule);
+  padding:0 48px;height:60px;
+  display:flex;align-items:center;justify-content:space-between;
+}
+.logo{
+  font-family:'Playfair Display',serif;
+  font-weight:900;font-size:1.35rem;
+  color:var(--ink);letter-spacing:-.02em;
+  display:flex;align-items:center;gap:8px;
+  text-decoration:none;
+}
+.logo-dot{width:7px;height:7px;border-radius:50%;background:var(--amber);flex-shrink:0}
+.back-btn{
+  display:flex;align-items:center;gap:7px;
+  font-size:.82rem;font-weight:600;
+  color:var(--ink3);
+  background:var(--white);
+  border:1.5px solid var(--rule2);
+  border-radius:20px;
+  padding:6px 14px;
+  cursor:pointer;
+  text-decoration:none;
+  transition:all .18s;
+}
+.back-btn:hover{color:var(--ink);border-color:var(--rule2);box-shadow:0 2px 8px rgba(0,0,0,.08)}
+#themeBtn{
+  background:var(--white);border:1.5px solid var(--rule2);
+  border-radius:50%;width:38px;height:38px;
+  cursor:pointer;font-size:1.1rem;
+  display:flex;align-items:center;justify-content:center;
+  transition:all .2s;box-shadow:0 1px 4px rgba(0,0,0,.08);
+}
+
+/* ── HERO ── */
+.page-hero{
+  max-width:780px;margin:0 auto;
+  padding:64px 40px 40px;
+  text-align:center;
+}
+.hero-badge{
+  display:inline-flex;align-items:center;gap:6px;
+  background:var(--green-light);color:var(--green);
+  border:1px solid #BBF7D0;
+  padding:5px 14px;border-radius:20px;
+  font-size:.75rem;font-weight:700;
+  letter-spacing:.04em;text-transform:uppercase;
+  margin-bottom:20px;
+}
+.page-hero h1{
+  font-family:'Playfair Display',serif;
+  font-weight:900;
+  font-size:clamp(2rem,4vw,3rem);
+  line-height:1.1;
+  letter-spacing:-.03em;
+  color:var(--ink);
+  margin-bottom:14px;
+}
+.page-hero h1 em{
+  font-style:italic;
+  color:var(--amber);
+}
+.page-hero p{
+  color:var(--ink3);
+  font-size:.92rem;
+  max-width:500px;
+  margin:0 auto 20px;
+}
+.last-updated{
+  display:inline-block;
+  font-size:.78rem;color:var(--ink4);
+  background:var(--white);
+  border:1px solid var(--rule);
+  border-radius:20px;
+  padding:5px 14px;
+}
+
+/* ── LAYOUT ── */
+.page-body{
+  max-width:900px;margin:0 auto;
+  padding:0 40px 80px;
+  display:grid;
+  grid-template-columns:220px 1fr;
+  gap:40px;
+  align-items:start;
+}
+
+/* ── TOC ── */
+.toc-card{
+  position:sticky;top:76px;
+  background:var(--white);
+  border:1px solid var(--rule);
+  border-radius:var(--r);
+  padding:20px;
+  box-shadow:0 1px 3px rgba(0,0,0,.06);
+}
+.toc-card h4{
+  font-size:.7rem;font-weight:700;
+  text-transform:uppercase;letter-spacing:.1em;
+  color:var(--ink4);margin-bottom:14px;
+}
+.toc-list{list-style:none}
+.toc-list li{margin-bottom:2px}
+.toc-list a{
+  display:block;
+  font-size:.78rem;font-weight:500;
+  color:var(--ink3);
+  text-decoration:none;
+  padding:5px 8px;
+  border-radius:6px;
+  transition:all .15s;
+  border-left:2px solid transparent;
+}
+.toc-list a:hover{
+  color:var(--amber);background:var(--amber-light);
+  border-left-color:var(--amber);
+}
+
+/* ── CONTENT ── */
+.policy-content{min-width:0}
+
+.policy-section{
+  background:var(--white);
+  border:1px solid var(--rule);
+  border-radius:var(--r);
+  padding:28px 32px;
+  margin-bottom:16px;
+  box-shadow:0 1px 3px rgba(0,0,0,.04);
+}
+
+.section-num{
+  display:inline-flex;align-items:center;justify-content:center;
+  width:28px;height:28px;
+  background:var(--amber-light);
+  color:var(--amber);
+  border-radius:8px;
+  font-size:.75rem;font-weight:800;
+  margin-bottom:12px;
+  flex-shrink:0;
+}
+.policy-section h2{
+  font-family:'Playfair Display',serif;
+  font-size:1.25rem;font-weight:700;
+  color:var(--ink);
+  margin-bottom:14px;
+  letter-spacing:-.02em;
+  display:flex;align-items:center;gap:10px;
+}
+.policy-section p{
+  color:var(--ink2);
+  font-size:.88rem;
+  line-height:1.75;
+  margin-bottom:12px;
+}
+.policy-section p:last-child{margin-bottom:0}
+.policy-section ul,.policy-section ol{
+  margin:10px 0 12px 0;
+  padding-left:20px;
+}
+.policy-section li{
+  color:var(--ink2);
+  font-size:.86rem;
+  line-height:1.7;
+  margin-bottom:6px;
+}
+.policy-section strong{color:var(--ink);font-weight:700}
+.policy-section a{color:var(--amber);text-decoration:none;font-weight:600}
+.policy-section a:hover{text-decoration:underline}
+
+/* ── HIGHLIGHT BOX ── */
+.highlight-box{
+  background:var(--amber-light);
+  border:1px solid #FDE68A;
+  border-radius:var(--r);
+  padding:16px 20px;
+  margin:14px 0;
+  font-size:.85rem;
+  color:#92400E;
+  line-height:1.65;
+}
+body.dark .highlight-box{color:var(--amber)}
+
+.green-box{
+  background:var(--green-light);
+  border:1px solid #BBF7D0;
+  border-radius:var(--r);
+  padding:16px 20px;
+  margin:14px 0;
+  font-size:.85rem;
+  color:#065F46;
+  line-height:1.65;
+}
+body.dark .green-box{color:var(--green)}
+
+.blue-box{
+  background:var(--blue-light);
+  border:1px solid #BFDBFE;
+  border-radius:var(--r);
+  padding:16px 20px;
+  margin:14px 0;
+  font-size:.85rem;
+  color:#1E40AF;
+  line-height:1.65;
+}
+body.dark .blue-box{color:var(--blue)}
+
+/* ── INFO CARDS ── */
+.info-cards{display:grid;grid-template-columns:1fr 1fr;gap:10px;margin:14px 0}
+.info-card{
+  background:var(--cream);
+  border:1px solid var(--rule);
+  border-radius:var(--r);
+  padding:14px 16px;
+}
+.info-card .ic-icon{font-size:1.4rem;margin-bottom:8px;display:block}
+.info-card h4{font-size:.8rem;font-weight:700;color:var(--ink);margin-bottom:4px}
+.info-card p{font-size:.75rem;color:var(--ink3);line-height:1.5;margin:0}
+
+/* ── PARTNER TABLE ── */
+.partner-table{width:100%;border-collapse:collapse;margin:14px 0;font-size:.82rem}
+.partner-table th{
+  background:var(--cream);color:var(--ink3);
+  font-size:.7rem;font-weight:700;text-transform:uppercase;letter-spacing:.06em;
+  padding:8px 12px;text-align:left;border-bottom:1px solid var(--rule);
+}
+.partner-table td{
+  padding:10px 12px;border-bottom:1px solid var(--rule);
+  color:var(--ink2);vertical-align:top;
+}
+.partner-table tr:last-child td{border-bottom:none}
+.partner-table tr:hover td{background:var(--cream)}
+.ptag{
+  display:inline-block;padding:2px 8px;
+  border-radius:4px;font-size:.65rem;font-weight:700;
+}
+
+/* ── CONTACT ── */
+.contact-box{
+  background:var(--ink);
+  border-radius:var(--r);
+  padding:28px 32px;
+  color:#fff;
+  text-align:center;
+  margin-top:24px;
+}
+.contact-box h3{
+  font-family:'Playfair Display',serif;
+  font-size:1.3rem;margin-bottom:8px;
+}
+.contact-box p{font-size:.85rem;color:#A8A29E;margin-bottom:16px}
+.contact-box a{
+  display:inline-block;
+  background:var(--amber);color:#fff;
+  padding:10px 24px;border-radius:8px;
+  font-weight:700;font-size:.85rem;
+  text-decoration:none;transition:all .18s;
+}
+.contact-box a:hover{background:#B45309}
+
+/* ── FOOTER ── */
+footer{
+  text-align:center;
+  padding:32px 40px;
+  color:var(--ink4);
+  font-size:.78rem;
+  border-top:1px solid var(--rule);
+  font-family:'Instrument Serif',serif;
+  font-style:italic;font-size:.88rem;
+}
+footer b{font-style:normal;color:var(--ink3)}
+
+/* ── RESPONSIVE ── */
+@media(max-width:768px){
+  header{padding:0 20px}
+  .page-hero{padding:40px 20px 28px}
+  .page-body{grid-template-columns:1fr;padding:0 20px 60px}
+  .toc-card{position:static;display:none}
+  .policy-section{padding:20px}
+  .info-cards{grid-template-columns:1fr}
+}
+</style>
+</head>
+<body>
+
+<!-- ── HEADER ── -->
+<header>
+  <a href="pdf-tools.html" class="logo">
+    <div class="logo-dot"></div>
+    DocFlow
+  </a>
+  <div style="display:flex;align-items:center;gap:10px">
+    <a href="pdf-tools.html" class="back-btn">← Back to Tools</a>
+    <button id="themeBtn" onclick="toggleTheme()" title="Toggle theme">💡</button>
+  </div>
+</header>
+
+<!-- ── HERO ── -->
+<div class="page-hero">
+  <div class="hero-badge">📋 Legal Document</div>
+  <h1>Privacy <em>Policy</em></h1>
+  <p>How DocFlow collects, uses, and protects your information — including how we use advertising to keep this service free.</p>
+  <div class="last-updated">Last Updated: 15 March, 2026</div>
+</div>
+
+<!-- ── BODY ── -->
+<div class="page-body">
+
+  <!-- TOC -->
+  <aside>
+    <div class="toc-card">
+      <h4>Contents</h4>
+      <ul class="toc-list">
+        <li><a href="#overview">1. Overview</a></li>
+        <li><a href="#data-collected">2. Data We Collect</a></li>
+        <li><a href="#how-it-works">3. How DocFlow Works</a></li>
+        <li><a href="#advertising">4. Advertising & Cookies</a></li>
+        <li><a href="#google-adsense">5. Google AdSense</a></li>
+        <li><a href="#third-party">6. Third-Party Services</a></li>
+        <li><a href="#cookies">7. Cookie Policy</a></li>
+        <li><a href="#user-rights">8. Your Rights</a></li>
+        <li><a href="#children">9. Children's Privacy</a></li>
+        <li><a href="#changes">10. Policy Changes</a></li>
+        <li><a href="#contact">11. Contact Us</a></li>
+      </ul>
+    </div>
+  </aside>
+
+  <!-- CONTENT -->
+  <main class="policy-content">
+
+    <!-- 1. OVERVIEW -->
+    <div class="policy-section" id="overview">
+      <h2><span class="section-num">1</span> Overview</h2>
+      <div class="green-box">
+        ✅ <strong>The Short Version:</strong> DocFlow is a free, browser-based PDF tool. We do not upload, store, or process your PDF files on any server. All file operations happen entirely in your browser on your device.
+      </div>
+      <p>Welcome to <strong>DocFlow</strong> ("we," "our," or "us"). This Privacy Policy explains how we handle information when you visit and use our website located at <strong>docflow.app</strong> (the "Service").</p>
+      <p>By using DocFlow, you agree to the practices described in this Privacy Policy. If you do not agree, please discontinue use of our Service.</p>
+    </div>
+
+    <!-- 2. DATA COLLECTED -->
+    <div class="policy-section" id="data-collected">
+      <h2><span class="section-num">2</span> Data We Collect</h2>
+      <p>We collect two categories of information:</p>
+      <div class="info-cards">
+        <div class="info-card">
+          <span class="ic-icon">🚫</span>
+          <h4>Your PDF Files</h4>
+          <p>We collect <strong>nothing</strong>. Your files never leave your device. All processing is local.</p>
+        </div>
+        <div class="info-card">
+          <span class="ic-icon">📊</span>
+          <h4>Usage & Analytics</h4>
+          <p>We collect anonymous usage data — page views, tool usage frequency, browser type, and country.</p>
+        </div>
+        <div class="info-card">
+          <span class="ic-icon">🍪</span>
+          <h4>Cookies</h4>
+          <p>Advertising partners and analytics services may place cookies to measure and personalize ads.</p>
+        </div>
+        <div class="info-card">
+          <span class="ic-icon">🌐</span>
+          <h4>Technical Data</h4>
+          <p>IP address, browser version, device type, referring URL, and timestamps — standard web server logs.</p>
+        </div>
+      </div>
+      <p>We do <strong>not</strong> collect: names, email addresses, passwords, payment information, or any personally identifiable information unless you voluntarily contact us.</p>
+    </div>
+
+    <!-- 3. HOW IT WORKS -->
+    <div class="policy-section" id="how-it-works">
+      <h2><span class="section-num">3</span> How DocFlow Works</h2>
+      <div class="green-box">
+        🔒 <strong>Your files are 100% private.</strong> DocFlow uses client-side JavaScript libraries (PDF.js, pdf-lib, Tesseract.js) that run entirely within your web browser. No file data is ever transmitted to our servers or any third-party server.
+      </div>
+      <p>When you use any DocFlow tool (merge, split, compress, OCR, sign, etc.):</p>
+      <ul>
+        <li>Your file is read directly by your browser's JavaScript engine</li>
+        <li>All processing (compression, merging, signing, etc.) happens on your device</li>
+        <li>The output file is generated locally and downloaded directly to your device</li>
+        <li>No file content, metadata, or preview is sent anywhere</li>
+      </ul>
+      <p>This is why DocFlow works even <strong>offline</strong> once the page is loaded.</p>
+    </div>
+
+    <!-- 4. ADVERTISING -->
+    <div class="policy-section" id="advertising">
+      <h2><span class="section-num">4</span> Advertising & How We Stay Free</h2>
+      <div class="highlight-box">
+        💡 <strong>Why Ads?</strong> DocFlow is completely free to use. To cover server, hosting, and development costs, we display advertisements. These ads are served by trusted partners including Google AdSense.
+      </div>
+      <p>We display advertisements on our website. These ads help us:</p>
+      <ul>
+        <li>Keep all tools completely free for everyone</li>
+        <li>Cover hosting and bandwidth costs</li>
+        <li>Continue developing new features</li>
+        <li>Maintain and update the platform</li>
+      </ul>
+      <p>Advertisements may be <strong>personalized</strong> or <strong>non-personalized</strong>. Personalized ads use cookies and your browsing history (across websites) to show you relevant content. You can opt out of personalized ads at any time (see Your Rights section).</p>
+      <p>We are not responsible for the content of advertisements displayed on our site. Ads are controlled entirely by our advertising partners.</p>
+    </div>
+
+    <!-- 5. GOOGLE ADSENSE -->
+    <div class="policy-section" id="google-adsense">
+      <h2><span class="section-num">5</span> Google AdSense</h2>
+      <div class="blue-box">
+        📢 DocFlow uses <strong>Google AdSense</strong> to display advertisements. Google AdSense is operated by Google LLC, 1600 Amphitheatre Pkwy, Mountain View, CA 94043, USA.
+      </div>
+      <p>Google AdSense uses cookies and similar tracking technologies to serve ads based on your prior visits to our website and other websites on the Internet. Google's use of advertising cookies enables it and its partners to serve ads to you based on your visit to our site and/or other sites on the Internet.</p>
+      <p><strong>What Google AdSense may collect:</strong></p>
+      <ul>
+        <li>Pages you visit on DocFlow and other websites</li>
+        <li>Ads you click or interact with</li>
+        <li>Your approximate location (city/region level)</li>
+        <li>Device type, browser, and operating system</li>
+        <li>Cookie identifiers and advertising IDs</li>
+      </ul>
+      <p>You may opt out of personalized advertising by visiting <a href="https://www.google.com/settings/ads" target="_blank" rel="noopener">Google Ad Settings</a> or by visiting <a href="https://www.aboutads.info/choices/" target="_blank" rel="noopener">www.aboutads.info</a>.</p>
+      <p>For more information about how Google uses data, please visit: <a href="https://policies.google.com/technologies/partner-sites" target="_blank" rel="noopener">Google Privacy & Terms</a>.</p>
+    </div>
+
+    <!-- 6. THIRD-PARTY -->
+    <div class="policy-section" id="third-party">
+      <h2><span class="section-num">6</span> Third-Party Services</h2>
+      <p>DocFlow integrates the following third-party services. Each has its own privacy policy:</p>
+      <table class="partner-table">
+        <thead>
+          <tr>
+            <th>Service</th>
+            <th>Purpose</th>
+            <th>Data Collected</th>
+            <th>Privacy Policy</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td><strong>Google AdSense</strong></td>
+            <td>Display advertisements</td>
+            <td>Cookies, browsing behavior</td>
+            <td><a href="https://policies.google.com/privacy" target="_blank">View →</a></td>
+          </tr>
+          <tr>
+            <td><strong>Google Analytics</strong></td>
+            <td>Usage analytics</td>
+            <td>Anonymous usage data</td>
+            <td><a href="https://policies.google.com/privacy" target="_blank">View →</a></td>
+          </tr>
+          <tr>
+            <td><strong>Google Fonts</strong></td>
+            <td>Typography</td>
+            <td>IP address (font request)</td>
+            <td><a href="https://policies.google.com/privacy" target="_blank">View →</a></td>
+          </tr>
+          <tr>
+            <td><strong>Cloudflare CDN</strong></td>
+            <td>PDF.js & pdf-lib delivery</td>
+            <td>IP address (CDN request)</td>
+            <td><a href="https://www.cloudflare.com/privacypolicy/" target="_blank">View →</a></td>
+          </tr>
+          <tr>
+            <td><strong>Tesseract.js</strong></td>
+            <td>OCR processing (local)</td>
+            <td><strong>None</strong> — runs locally</td>
+            <td><a href="https://github.com/naptha/tesseract.js" target="_blank">GitHub →</a></td>
+          </tr>
+        </tbody>
+      </table>
+      <p>We do not sell your personal information to any third party. We only share data as described above with service providers who help us operate our website.</p>
+    </div>
+
+    <!-- 7. COOKIES -->
+    <div class="policy-section" id="cookies">
+      <h2><span class="section-num">7</span> Cookie Policy</h2>
+      <p>Cookies are small text files stored on your device when you visit a website. DocFlow uses the following types of cookies:</p>
+      <ul>
+        <li><strong>Essential Cookies:</strong> Required for the site to function (e.g., dark mode preference saved in localStorage). These cannot be disabled.</li>
+        <li><strong>Analytics Cookies:</strong> Used by Google Analytics to understand how users interact with our site (anonymous data only).</li>
+        <li><strong>Advertising Cookies:</strong> Used by Google AdSense to show relevant advertisements. These track browsing behavior across websites.</li>
+      </ul>
+      <div class="highlight-box">
+        🍪 <strong>Cookie Consent:</strong> By continuing to use DocFlow, you consent to our use of cookies as described above. You can manage or delete cookies through your browser settings at any time.
+      </div>
+      <p><strong>How to control cookies:</strong></p>
+      <ul>
+        <li><strong>Chrome:</strong> Settings → Privacy and Security → Cookies</li>
+        <li><strong>Firefox:</strong> Options → Privacy & Security → Cookies</li>
+        <li><strong>Safari:</strong> Preferences → Privacy → Cookies</li>
+        <li><strong>Edge:</strong> Settings → Privacy → Cookies</li>
+      </ul>
+      <p>Note: Disabling cookies may affect the functionality of advertisements and analytics on our site.</p>
+    </div>
+
+    <!-- 8. USER RIGHTS -->
+    <div class="policy-section" id="user-rights">
+      <h2><span class="section-num">8</span> Your Rights</h2>
+      <p>Depending on your location, you may have the following rights regarding your personal data:</p>
+      <ul>
+        <li><strong>Right to Access:</strong> Request a copy of any personal data we hold about you.</li>
+        <li><strong>Right to Deletion:</strong> Request that we delete any personal data associated with you.</li>
+        <li><strong>Right to Opt-Out of Personalized Ads:</strong> Visit <a href="https://www.google.com/settings/ads" target="_blank">Google Ad Settings</a> to opt out.</li>
+        <li><strong>Right to Opt-Out of Analytics:</strong> Install the <a href="https://tools.google.com/dlpage/gaoptout" target="_blank">Google Analytics Opt-out Browser Add-on</a>.</li>
+        <li><strong>GDPR (EU Users):</strong> You have rights under GDPR including data access, rectification, erasure, and portability.</li>
+        <li><strong>CCPA (California Users):</strong> You have the right to know what personal information is collected and to opt out of its sale.</li>
+      </ul>
+      <p>To exercise any of these rights, please contact us at the email address provided in the Contact section below.</p>
+    </div>
+
+    <!-- 9. CHILDREN -->
+    <div class="policy-section" id="children">
+      <h2><span class="section-num">9</span> Children's Privacy</h2>
+      <p>DocFlow is not directed to children under the age of <strong>13</strong> (or 16 in the European Union). We do not knowingly collect personal information from children.</p>
+      <p>If you are a parent or guardian and believe your child has provided us with personal information, please contact us immediately. We will take steps to delete such information from our systems.</p>
+      <p>Google AdSense has policies against targeting advertisements to children. Our advertising does not specifically target users under 13.</p>
+    </div>
+
+    <!-- 10. CHANGES -->
+    <div class="policy-section" id="changes">
+      <h2><span class="section-num">10</span> Changes to This Policy</h2>
+      <p>We may update this Privacy Policy from time to time to reflect changes in our practices, technology, legal requirements, or other factors.</p>
+      <p>When we make significant changes, we will:</p>
+      <ul>
+        <li>Update the "Last Updated" date at the top of this page</li>
+        <li>Notify users through a notice on our main website</li>
+      </ul>
+      <p>We encourage you to review this Privacy Policy periodically. Your continued use of DocFlow after changes are posted constitutes your acceptance of those changes.</p>
+    </div>
+
+    <!-- 11. CONTACT -->
+    <div class="policy-section" id="contact">
+      <h2><span class="section-num">11</span> Contact Us</h2>
+      <p>If you have any questions, concerns, or requests regarding this Privacy Policy or our data practices, please contact us:</p>
+      <ul>
+        <li><strong>Email:</strong> mohdshaban7906@gmail.com</li>
+        <li><strong>Website:</strong> docflow.app</li>
+        <li><strong>Response Time:</strong> We aim to respond within 48 hours</li>
+      </ul>
+      <p>For GDPR-related requests, please include "GDPR Request" in your subject line. For CCPA requests, include "CCPA Request".</p>
+    </div>
+
+    <!-- CONTACT CTA -->
+    <div class="contact-box">
+      <h3>Have a Question?</h3>
+      <p>Our team is happy to help with any privacy concerns or data requests.</p>
+      <a href="mail to:mohdshaban7906@gmail.com">📧 mohdshaban7906@gmail.com</a>
+    </div>
+
+  </main>
+</div>
+
+<footer>
+  © 2026 DocFlow PDF Tools · <b>All rights reserved</b> · <a href="pdf-tools.html" style="color:var(--amber);font-style:normal;font-family:'Plus Jakarta Sans',sans-serif;font-size:.8rem">Back to Tools</a>
+</footer>
+
+<script>
+// Dark mode
+function toggleTheme(){
+  const dark=document.body.classList.toggle('dark');
+  document.getElementById('themeBtn').textContent=dark?'☀️':'💡';
+  localStorage.setItem('docflow-theme',dark?'dark':'light');
+}
+(function(){
+  if(localStorage.getItem('docflow-theme')==='dark'){
+    document.body.classList.add('dark');
+    document.getElementById('themeBtn').textContent='☀️';
+  }
+})();
+
+// Smooth scroll for TOC
+document.querySelectorAll('.toc-list a').forEach(a=>{
+  a.addEventListener('click',e=>{
+    e.preventDefault();
+    const target=document.querySelector(a.getAttribute('href'));
+    if(target) target.scrollIntoView({behavior:'smooth',block:'start'});
+  });
+});
+</script>
+</body>
+</html>
